@@ -1,0 +1,91 @@
+.mvhdr {
+  padding: 0.5rem 0 0.3rem 0;
+  display: flex;
+  background: #111;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  @media only screen and (max-width: 30em) {
+    padding: 0;
+    align-items: start;
+    min-height: 11vh;
+  }
+  &-searchmv {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.356);
+    background: rgba(255, 255, 255, 0.185);
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    @media only screen and (max-width: 30em) {
+      width: 25rem;
+      font-size: 1.9rem;
+      margin: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
+  &-dispflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: 30em) {
+      height: 7vh;
+      flex-direction: column;
+    }
+  }
+  &-genrelink {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.356);
+    background: rgba(255, 255, 255, 0.185);
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    @media only screen and (max-width: 30em) {
+      width: 25rem;
+      font-size: 1.9rem;
+      margin: 0.5rem;
+    }
+  }
+  &-logo {
+    height: 4rem;
+    width: 12rem;
+    margin-left: 2rem;
+
+    @media only screen and (max-width: 36.5em) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: 30em) {
+      margin-top: 3rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &-input {
+    border: none;
+    width: 35rem;
+    margin-right: 4rem;
+    // height: 3rem;
+    @media only screen and (max-width: 36.5em) {
+      margin-right: 0;
+      margin-top: 3rem;
+    }
+
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    font-family: inherit;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.185);
+    font-weight: 500;
+    color: white;
+    &:focus {
+      width: 40rem;
+      outline: none;
+      @media only screen and (max-width: 30em) {
+        width: 35rem;
+      }
+    }
+  }
+}

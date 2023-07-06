@@ -1,0 +1,129 @@
+.slide {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  &-title {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    background: rgba(0, 0, 0, 0.411);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  &-rating {
+    position: absolute;
+    right: 5rem;
+    background: rgba(255, 255, 255, 0.623);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    top: 1rem;
+    @media only screen and (max-width: 36.5em) {
+      top: 5rem;
+    }
+  }
+  &-inTheater {
+    position: absolute;
+    left: 5rem;
+    top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  &-release {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 500;
+    top: 7rem;
+    left: 5rem;
+  }
+  &-reco {
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    font-size: 2rem;
+    background: rgb(29, 41, 4);
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.75);
+    animation: highlite 1s infinite;
+    transition: all 1s;
+  }
+}
+@keyframes highlite {
+  0% {
+    box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.75);
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.015);
+    box-shadow: 2px 2px 16px 7px rgba(0, 0, 0, 0.75);
+  }
+}
+.quote {
+  &-smallsize {
+    font-size: 2rem !important;
+  }
+  background: #111;
+  font-size: 3rem;
+  color: #ddd;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @media only screen and (max-width: 36.5em) {
+    height: 13rem;
+  }
+  &-small {
+    @media only screen and (max-width: 36.5em) {
+      font-size: 1.5rem;
+    }
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
+  }
+}
+.movie-footer {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.062);
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  align-items: center;
+  background: #111;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  min-height: 10vh;
+  &-by {
+    color: white;
+    font-size: 1.2rem;
+    @media only screen and (max-width: 56.25em) {
+      font-size: 1.5rem;
+    }
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    &-link {
+      width: 6rem;
+      text-decoration: none;
+    }
+    &-item {
+      width: 6rem;
+      height: 2rem;
+      fill: white;
+      cursor: pointer;
+      margin: 0 1rem 0 1rem;
+    }
+  }
+}
+.infolink {
+  text-decoration: none;
+}

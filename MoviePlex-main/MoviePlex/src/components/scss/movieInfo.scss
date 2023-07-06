@@ -1,0 +1,353 @@
+.info {
+  &-header {
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+  }
+  &-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    z-index: -2;
+  }
+  &-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.418);
+    filter: blur(5rem);
+    z-index: -1;
+  }
+  &-genre {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    left: 2rem;
+    &-item {
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1rem 1rem 0.5rem 0;
+      border-right: 0.25rem solid black;
+      padding-right: 0.5rem;
+    }
+  }
+  &-title {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #eee;
+    position: absolute;
+    top: 18rem;
+    left: 5rem;
+    padding: 0.5rem;
+    min-width: 40rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background: black;
+      height: 0.2rem;
+      width: 100%;
+      left: -15rem;
+      bottom: 0;
+    }
+  }
+  &-tagline {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #bbb;
+    // margin-left: 20rem;
+    position: absolute;
+    bottom: -3rem;
+    right: 8rem;
+    @media only screen and (max-width: 30em) {
+      bottom: -5rem;
+    }
+  }
+  &-money {
+    position: absolute;
+    bottom: 10.5rem;
+    font-size: 1.5rem;
+    left: 5rem;
+    font-weight: 500;
+    color: #eee;
+    @media only screen and (max-width: 30em) {
+      bottom: 15rem;
+    }
+    &-budget {
+      margin: 1rem;
+    }
+    &-revenue {
+      margin: 1rem;
+    }
+  }
+  &-rating {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    color: #eee;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  &-link {
+    text-decoration: none;
+    position: absolute;
+    right: 0rem;
+    color: white;
+    letter-spacing: 1px;
+    background-color: black;
+    padding: 1rem;
+  }
+  &-production {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    background: #111;
+    &-title {
+      font-size: 3rem;
+      color: #ddd;
+      font-weight: 500;
+      background: #111;
+      padding: 1rem;
+      font-weight: 500;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-logo {
+        width: 12rem;
+        margin: 0.5rem;
+        background: rgba(255, 255, 255, 0.096);
+        padding: 1rem;
+        border-radius: 2rem;
+      }
+      &-name {
+        font-size: 1.5rem;
+        color: rgba(221, 221, 221, 0.534);
+      }
+    }
+  }
+  &-runtime {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 47.5rem) {
+      top: 0;
+      height: 5rem;
+    }
+    @media only screen and (max-width: 25rem) {
+      top: 0;
+      left: 5rem;
+      height: 5rem;
+    }
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+      margin: 0.5rem;
+      fill: rgba(255, 255, 255, 0.486);
+    }
+  }
+  &-trailer {
+    cursor: pointer;
+    position: absolute;
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    left: 30rem;
+    bottom: 9rem;
+    &-icon {
+      width: 5rem;
+      height: 5rem;
+      margin: 2rem;
+      fill: #ff0000;
+    }
+    @media only screen and (max-width: 30em) {
+      bottom: 14rem;
+      left: 25rem;
+    }
+  }
+  &-extids {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 18rem;
+    right: 0;
+    background: black;
+    @media only screen and (max-width: 35rem) {
+      top: 30rem;
+    }
+    &-link {
+      &-logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 1rem;
+        fill: white;
+        &-inst {
+          &:hover {
+            fill: #e1306c;
+          }
+        }
+        &-twitter {
+          &:hover {
+            fill: #1da1f2;
+          }
+        }
+        &-fb {
+          &:hover {
+            fill: #4267b2;
+          }
+        }
+      }
+    }
+  }
+  &-visite-msg {
+    position: absolute;
+    right: -6rem;
+    bottom: -8rem;
+    transform: rotate(-90deg);
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 14rem;
+  }
+}
+.ov {
+  background: #111;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  &-title {
+    color: #ddd;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  &-data {
+    padding: 2rem;
+    color: #ddd;
+    font-size: 1.5rem;
+  }
+  &-relese {
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+}
+.cast {
+  &-element {
+    transition: all 0.3s;
+    margin-right: 2rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &-img {
+    width: 15rem;
+    border-radius: 1rem;
+    position: relative;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   background: url(../../assets/repimg.png);
+    // }
+  }
+  &-char {
+    color: #ddd;
+    font-size: 1.5rem;
+  }
+  &-name {
+    color: #ddd;
+    font-size: 1.5rem;
+  }
+  &-small {
+    color: rgba(221, 221, 221, 0.247);
+    font-size: 1.2rem;
+  }
+}
+.review {
+  &-element {
+    width: 50rem !important;
+    margin: 0 2rem 0 2rem;
+    // background: red;
+    height: 20rem;
+    // overflow: scroll !important;
+  }
+  &-author {
+    color: #ddd;
+    font-size: 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.308);
+  }
+  &-content {
+    padding-top: 1rem;
+    width: 50rem !important;
+    color: rgba(255, 255, 255, 0.438);
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+}
+
+.wp {
+  padding-top: 4rem;
+  background: #111;
+  &-title {
+    color: #ddd;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+  &-none {
+    font-size: 1.5rem;
+    color: rgba(221, 221, 221, 0.377);
+    margin-left: 1rem;
+  }
+  &-buy {
+    display: flex;
+    align-items: center;
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 4rem;
+    }
+    &-title {
+      padding: 1rem;
+      margin-left: 3rem;
+      font-size: 2rem;
+      align-self: start;
+      color: #ddd;
+      width: 10rem;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1.5rem;
+      &-img {
+        width: 5rem;
+        border-radius: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      &-name {
+        font-size: 1.5rem;
+        color: rgba(221, 221, 221, 0.548);
+      }
+    }
+  }
+}

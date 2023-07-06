@@ -1,0 +1,326 @@
+.main-header {
+  position: relative;
+  height: 90vh;
+  overflow-x: hidden;
+  @media only screen and (max-width: 26em) {
+    height: 75vh;
+  }
+}
+.login-btn {
+  background: none;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1rem;
+  &-icon {
+    width: 3rem;
+    margin-right: 0.5rem;
+  }
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; //similar to background_size:cover,obect-fit fills entire parent element
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  &-img {
+    color: white;
+    background: #040;
+    border-radius: 20rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+  }
+  &-login {
+    position: absolute;
+    right: 3rem;
+
+    @media only screen and (max-width: 30em) {
+      height: 4rem;
+      overflow: hidden;
+    }
+  }
+  &-logout {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background: #030;
+    border-radius: 2rem;
+    margin-left: 1rem;
+  }
+  &-name {
+    color: white;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    background: #030;
+    border-radius: 2rem;
+  }
+  &-form {
+    width: 43%;
+    margin-right: 1rem;
+    position: absolute;
+    left: 5rem;
+    top: 40rem;
+    @media only screen and (max-width: 30em) {
+      margin-top: 5rem;
+      width: 70%;
+      left: 3rem;
+    }
+    &-input {
+      padding: 1rem;
+      width: 100%;
+      border-radius: .3rem;
+      outline: none;
+      border: none;
+      color: black;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: rgba(255, 253, 253, 0.274);
+      &::placeholder {
+        color: black;
+        font-weight: 500;
+      }
+    }
+  }
+  &-logo {
+    height: 4rem;
+    width: 12rem;
+    margin-left: 2rem;
+    @media only screen and (max-width: 30em) {
+      margin-left: 1rem;
+    }
+  }
+  &-nav {
+    transition: all 0.5s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &-item {
+      font-size: 1.7rem;
+      background: none;
+      color: white;
+      font-weight: 700;
+      padding: 0 0.5rem 0 0.5rem;
+      text-decoration: none;
+      color: white;
+
+      &-3 {
+        background-color: #030;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: .3rem;
+        @media only screen and (max-width: 30em) {
+          display: none;
+        }
+      }
+      &-1,
+      &-2 {
+        margin-right: 2.5rem;
+        background-color: #030;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: .3rem;
+        @media only screen and (max-width: 30em) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.header-nav-item:hover {
+  border-bottom: 2px solid rgb(0, 80, 0);
+}
+.welcome {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  top: 20rem;
+  left: 5rem;
+  @media only screen and (max-width: 30em) {
+    left: 3rem;
+  }
+}
+.movieex {
+  position: absolute;
+  font-size: 6rem;
+  color: white;
+  top: 23rem;
+  left: 5rem;
+  @media only screen and (max-width: 30em) {
+    left: 3rem;
+  }
+}
+
+.millions {
+  color: rgba(255, 255, 255, 0.767);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 35rem;
+  left: 5rem;
+  @media only screen and (max-width: 30em) {
+    left: 3rem;
+  }
+}
+.explore {
+  position: absolute;
+  left: 5rem;
+  top: 45rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  @media only screen and (max-width: 30em) {
+    margin-top: 10rem;
+    left: 3rem;
+  }
+  &-now {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-right: 2rem;
+  }
+  &-arrow {
+    font-size: 3rem;
+    margin-right: 2rem;
+    color: green;
+    cursor: default;
+  }
+  &-btn {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: .7rem 1rem .7rem 1rem;
+    margin-right: 2rem;
+    border-radius: .3rem;
+    background: rgba(255, 255, 255, 0.719);
+    box-shadow: 3px 4px 9px 0px rgba(255, 255, 255, 0.397);
+    &:hover {
+      box-shadow: 1px 2px 7px 0px rgba(255, 255, 255, 0.397);
+      transform: translateY(0.2rem);
+    }
+  }
+}
+.joker {
+  position: absolute;
+  top: 30rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 47.5em) {
+    display: none;
+  }
+  @media only screen and (max-width: 30em) {
+    display: flex;
+    position: absolute;
+    top: 85%;
+    right: 2rem;
+  }
+  &-title {
+    height: 9rem;
+    width: 32rem;
+    opacity: 0.5;
+    @media only screen and (max-width: 30em) {
+      height: 5rem;
+      width: 12rem;
+    }
+  }
+  &-dir {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.575);
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    @media only screen and (max-width: 30em) {
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &-tagline {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.534);
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    @media only screen and (max-width: 30em) {
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &-watchnow {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.205);
+    font-weight: 700;
+    @media only screen and (max-width: 30em) {
+      font-size: 1rem;
+    }
+  }
+  &-img {
+    width: 15rem;
+    height: 8rem;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    @media only screen and (max-width: 30em) {
+      width: 7rem;
+      margin-top: -1rem;
+      height: 4rem;
+    }
+  }
+}
+.main-header {
+  background-image: url(../../assets/bakground.jpg);
+  background-size: cover;
+  background-position: top;
+}
+.login-msg {
+  color: white;
+  background: #030;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 3rem;
+  &-btn {
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+}
+.dispnone {
+  display: none;
+  width: 0;
+  height: 0;
+}
